@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-labelledby="title">
+  <title id="title">NOVA Keys 75 机械键盘</title>
+  <rect width="720" height="460" rx="32" fill="#121c22"/>
+  <rect x="70" y="120" width="580" height="230" rx="26" fill="#eef4f4"/>
+  <rect x="92" y="146" width="536" height="178" rx="16" fill="#d9e4e6"/>
+  <g fill="#152128">
+    <rect x="112" y="166" width="48" height="38" rx="6"/>
+    <rect x="172" y="166" width="48" height="38" rx="6"/>
+    <rect x="232" y="166" width="48" height="38" rx="6"/>
+    <rect x="292" y="166" width="48" height="38" rx="6"/>
+    <rect x="352" y="166" width="48" height="38" rx="6"/>
+    <rect x="412" y="166" width="48" height="38" rx="6"/>
+    <rect x="472" y="166" width="48" height="38" rx="6"/>
+    <rect x="532" y="166" width="68" height="38" rx="6"/>
+    <rect x="112" y="218" width="68" height="38" rx="6"/>
+    <rect x="192" y="218" width="48" height="38" rx="6"/>
+    <rect x="252" y="218" width="48" height="38" rx="6"/>
+    <rect x="312" y="218" width="48" height="38" rx="6"/>
+    <rect x="372" y="218" width="48" height="38" rx="6"/>
+    <rect x="432" y="218" width="48" height="38" rx="6"/>
+    <rect x="492" y="218" width="108" height="38" rx="6"/>
+    <rect x="112" y="270" width="88" height="38" rx="6"/>
+    <rect x="212" y="270" width="258" height="38" rx="6"/>
+    <rect x="482" y="270" width="58" height="38" rx="6"/>
+    <rect x="552" y="270" width="48" height="38" rx="6"/>
+  </g>
+  <rect x="112" y="166" width="48" height="38" rx="6" fill="#57f0c6"/>
+  <rect x="532" y="166" width="68" height="38" rx="6" fill="#ffcf5a"/>
+  <rect x="552" y="270" width="48" height="38" rx="6" fill="#ff6b6b"/>
+  <path d="M132 360 H588" stroke="#57f0c6" stroke-width="12" stroke-linecap="round"/>
+</svg>

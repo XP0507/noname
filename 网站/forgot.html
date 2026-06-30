@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>找回密码 - NOVA LAB</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <header class="site-header compact-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">N</span><span><strong>NOVA LAB</strong><small>Future Gear Store</small></span></a>
+      <nav class="main-nav">
+        <a href="index.html">首页</a>
+        <a href="destinations.html">产品展示</a>
+        <a href="news.html">品牌资讯</a>
+        <a href="about.html">关于我们</a>
+        <a class="active" href="login.html">登录</a>
+        <a class="nav-action" href="register.html">注册会员</a>
+      </nav>
+    </div>
+  </header>
+  <main class="auth-page">
+    <form class="auth-form single-form" action="login.html" method="get">
+      <h1>找回密码</h1>
+      <label for="resetEmail">注册邮箱</label>
+      <input id="resetEmail" type="email" name="email" placeholder="请输入注册邮箱" required>
+      <button type="submit">发送验证邮件</button>
+      <p class="form-tip"><a href="login.html">返回登录</a></p>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <p>版权所有 © 2026 NOVA LAB　桂ICP备20260701号</p>
+  </footer>
+  <script src="js/ambient.js"></script>
+</body>
+</html>
