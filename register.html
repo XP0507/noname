@@ -3,36 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>用户注册 - 海丝北海</title>
+  <title>注册会员 - NOVA LAB</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header compact-header">
-    <div class="brand-row">
-      <a class="logo" href="index.html" aria-label="海丝北海首页">
-        <span class="logo-mark">海</span>
-        <span><strong>海丝北海</strong><small>Beihai Travel Guide</small></span>
-      </a>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">N</span><span><strong>NOVA LAB</strong><small>Future Gear Store</small></span></a>
       <nav class="main-nav">
         <a href="index.html">首页</a>
-        <a href="destinations.html">景点展示</a>
-        <a href="news.html">新闻动态</a>
+        <a href="destinations.html">产品展示</a>
+        <a href="news.html">品牌资讯</a>
         <a href="about.html">关于我们</a>
         <a href="login.html">登录</a>
-        <a class="active nav-btn" href="register.html">注册</a>
+        <a class="active nav-action" href="register.html">注册会员</a>
       </nav>
     </div>
   </header>
 
   <main class="auth-page">
-    <section class="auth-panel register-panel">
-      <div class="auth-visual">
-        <p class="section-kicker">加入我们</p>
-        <h1>创建你的北海旅行账号</h1>
-        <p>注册后可以收藏景点、提交留言、获取活动通知，轻松管理个人旅行计划。</p>
+    <section class="auth-shell register-shell">
+      <div class="auth-intro">
+        <p class="eyebrow">Join NOVA</p>
+        <h1>创建会员账号</h1>
+        <p>获得新品提醒、会员专属价、线下体验预约和售后进度查询服务。</p>
       </div>
       <form class="auth-form" action="login.html" method="get">
-        <h2>用户注册</h2>
+        <h2>注册会员</h2>
         <label for="username">用户名</label>
         <input id="username" name="username" type="text" placeholder="4-16位字母或数字" pattern="[A-Za-z0-9]{4,16}" required>
 
@@ -45,28 +42,24 @@
         <label for="password">设置密码</label>
         <input id="password" name="password" type="password" placeholder="至少6位字符" minlength="6" required>
 
-        <label for="travelType">旅行偏好</label>
-        <select id="travelType" name="travelType" required>
-          <option value="">请选择偏好</option>
-          <option value="family">亲子休闲</option>
-          <option value="culture">历史文化</option>
-          <option value="food">美食探店</option>
-          <option value="island">海岛度假</option>
+        <label for="interest">感兴趣的品类</label>
+        <select id="interest" name="interest" required>
+          <option value="">请选择品类</option>
+          <option value="audio">无线音频</option>
+          <option value="keyboard">机械键盘</option>
+          <option value="watch">智能穿戴</option>
+          <option value="desk">桌面配件</option>
         </select>
 
-        <label class="check-line agree-line">
-          <input type="checkbox" name="agree" required>
-          <span>我已阅读并同意网站服务条款</span>
-        </label>
-
-        <button type="submit">立即注册</button>
+        <label class="check-line agree-line"><input type="checkbox" name="agree" required><span>我已阅读并同意会员服务条款</span></label>
+        <button type="submit">完成注册</button>
         <p class="form-tip">已有账号？<a href="login.html">返回登录</a></p>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>版权所有 © 2026 海丝北海　桂ICP备20260630号</p>
+    <p>版权所有 © 2026 NOVA LAB　桂ICP备20260701号</p>
   </footer>
 </body>
 </html>

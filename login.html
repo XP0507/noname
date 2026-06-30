@@ -3,58 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>会员登录 - 海丝北海</title>
+  <title>会员登录 - NOVA LAB</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header compact-header">
-    <div class="brand-row">
-      <a class="logo" href="index.html" aria-label="海丝北海首页">
-        <span class="logo-mark">海</span>
-        <span><strong>海丝北海</strong><small>Beihai Travel Guide</small></span>
-      </a>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">N</span><span><strong>NOVA LAB</strong><small>Future Gear Store</small></span></a>
       <nav class="main-nav">
         <a href="index.html">首页</a>
-        <a href="destinations.html">景点展示</a>
-        <a href="news.html">新闻动态</a>
+        <a href="destinations.html">产品展示</a>
+        <a href="news.html">品牌资讯</a>
         <a href="about.html">关于我们</a>
         <a class="active" href="login.html">登录</a>
-        <a class="nav-btn" href="register.html">注册</a>
+        <a class="nav-action" href="register.html">注册会员</a>
       </nav>
     </div>
   </header>
 
   <main class="auth-page">
-    <section class="auth-panel">
-      <div class="auth-visual">
-        <p class="section-kicker">会员中心</p>
-        <h1>登录后收藏路线与景点</h1>
-        <p>查看个性化旅行计划、接收景区提醒，并管理自己的咨询记录。</p>
+    <section class="auth-shell">
+      <div class="auth-intro">
+        <p class="eyebrow">Member Center</p>
+        <h1>欢迎回来</h1>
+        <p>登录后可查看会员价格、收藏装备方案、查询售后进度，并预约线下体验。</p>
       </div>
       <form class="auth-form" action="index.html" method="get">
-        <h2>用户登录</h2>
-        <label for="loginUser">手机号或邮箱</label>
-        <input id="loginUser" name="account" type="text" placeholder="请输入手机号或邮箱" required>
+        <h2>会员登录</h2>
+        <label for="loginAccount">手机号或邮箱</label>
+        <input id="loginAccount" name="account" type="text" placeholder="请输入手机号或邮箱" required>
 
-        <label for="loginPassword">密码</label>
-        <input id="loginPassword" name="password" type="password" placeholder="请输入密码" minlength="6" required>
+        <label for="loginPassword">登录密码</label>
+        <input id="loginPassword" name="password" type="password" placeholder="请输入至少6位密码" minlength="6" required>
 
         <div class="form-row">
-          <label class="check-line">
-            <input type="checkbox" name="remember">
-            <span>记住我</span>
-          </label>
+          <label class="check-line"><input type="checkbox" name="remember"><span>保持登录</span></label>
           <a href="forgot.html">忘记密码？</a>
         </div>
 
-        <button type="submit">立即登录</button>
-        <p class="form-tip">还没有账号？<a href="register.html">免费注册</a></p>
+        <button type="submit">登录</button>
+        <p class="form-tip">还没有账号？<a href="register.html">立即注册</a></p>
       </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>版权所有 © 2026 海丝北海　桂ICP备20260630号</p>
+    <p>版权所有 © 2026 NOVA LAB　桂ICP备20260701号</p>
   </footer>
 </body>
 </html>

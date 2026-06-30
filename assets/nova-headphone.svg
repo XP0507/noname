@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-labelledby="title">
+  <title id="title">NOVA Pulse Pro 无线耳机</title>
+  <rect width="640" height="520" rx="32" fill="#132027"/>
+  <path d="M166 276 C166 166 230 94 320 94 C410 94 474 166 474 276" fill="none" stroke="#57f0c6" stroke-width="34" stroke-linecap="round"/>
+  <rect x="112" y="250" width="124" height="178" rx="42" fill="#f7fbfd"/>
+  <rect x="404" y="250" width="124" height="178" rx="42" fill="#f7fbfd"/>
+  <rect x="145" y="286" width="58" height="108" rx="26" fill="#11191e"/>
+  <rect x="437" y="286" width="58" height="108" rx="26" fill="#11191e"/>
+  <path d="M206 284 C246 245 285 226 322 226 C361 226 399 245 436 284" fill="none" stroke="#ffcf5a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="320" cy="91" r="22" fill="#ff6b6b"/>
+  <path d="M112 438 H528" stroke="#2d3c43" stroke-width="14" stroke-linecap="round"/>
+</svg>
