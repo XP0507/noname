@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" role="img" aria-labelledby="title desc">
+  <title id="title">北海银滩</title>
+  <desc id="desc">日出、海面、沙滩与棕榈树组成的滨海风景</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9f3f1"/>
+      <stop offset="0.54" stop-color="#f8d7a3"/>
+      <stop offset="1" stop-color="#f4f0dc"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#4cb7b1"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="660" fill="url(#sky)"/>
+  <circle cx="705" cy="150" r="72" fill="#d97706" opacity="0.85"/>
+  <path d="M0 316 C160 260 260 330 420 286 C560 248 690 286 960 235 L960 660 L0 660 Z" fill="url(#sea)"/>
+  <path d="M0 405 C180 360 285 420 470 382 C610 354 760 400 960 350 L960 660 L0 660 Z" fill="#82d1cd" opacity="0.7"/>
+  <path d="M0 505 C180 475 420 530 620 485 C770 452 860 487 960 466 L960 660 L0 660 Z" fill="#f2d49b"/>
+  <path d="M0 565 C220 535 390 584 600 548 C745 523 850 542 960 526 L960 660 L0 660 Z" fill="#f8e4b7"/>
+  <path d="M163 242 C155 340 136 456 98 594" stroke="#5f4b32" stroke-width="18" stroke-linecap="round"/>
+  <path d="M151 236 C96 236 54 219 20 180 C82 182 129 196 151 236 Z" fill="#1f8a70"/>
+  <path d="M161 236 C212 204 258 196 318 207 C272 244 220 253 161 236 Z" fill="#229b81"/>
+  <path d="M156 225 C132 170 128 122 148 72 C183 119 190 170 156 225 Z" fill="#2aa889"/>
+  <path d="M154 231 C109 194 82 156 74 107 C128 131 156 169 154 231 Z" fill="#0f766e"/>
+  <path d="M174 236 C223 236 265 252 307 290 C248 293 204 278 174 236 Z" fill="#16796c"/>
+  <g fill="#ffffff" opacity="0.72">
+    <path d="M412 161 h98 a42 42 0 0 0 -78 -20 a34 34 0 0 0 -20 20z"/>
+    <path d="M610 234 h128 a52 52 0 0 0 -98 -24 a39 39 0 0 0 -30 24z"/>
+  </g>
+</svg>
