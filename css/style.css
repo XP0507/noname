@@ -7,7 +7,33 @@ body {
   color: #eef6f7;
   font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
   line-height: 1.6;
-  background: #0e1418;
+  background: #090d18;
+  overflow-x: hidden;
+}
+
+#ambient-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(118, 70, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 82% 12%, rgba(87, 240, 198, 0.12), transparent 28%),
+    linear-gradient(180deg, #0a0d1c 0%, #0b1019 52%, #070b12 100%);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(142, 93, 255, 0.12), transparent 20%, transparent 80%, rgba(255, 111, 203, 0.1)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 104px);
+  opacity: 0.44;
 }
 
 a {
@@ -24,7 +50,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(14, 20, 24, 0.94);
+  background: rgba(10, 13, 24, 0.86);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(16px);
 }
@@ -204,7 +230,8 @@ img {
   overflow: hidden;
   background:
     linear-gradient(150deg, rgba(87, 240, 198, 0.16), rgba(255, 107, 107, 0.12)),
-    linear-gradient(180deg, #19252b, #11191e);
+    linear-gradient(180deg, rgba(25, 37, 43, 0.9), rgba(17, 25, 30, 0.88));
+  backdrop-filter: blur(8px);
 }
 
 .hero-stage::before {
@@ -284,7 +311,7 @@ img {
 
 .metric-strip div {
   padding: 22px;
-  background: #151f24;
+  background: rgba(21, 31, 36, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
@@ -343,10 +370,11 @@ img {
 .contact-panel,
 .auth-form,
 .auth-intro {
-  background: #151f24;
+  background: rgba(21, 31, 36, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   box-shadow: 0 20px 42px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(10px);
 }
 
 .product-card {
@@ -560,7 +588,7 @@ img {
   padding: 48px 24px;
   background:
     linear-gradient(135deg, rgba(87, 240, 198, 0.14), rgba(255, 207, 90, 0.1)),
-    #0e1418;
+    transparent;
 }
 
 .auth-shell {
@@ -676,8 +704,14 @@ img {
   gap: 24px;
   padding: 26px max(24px, calc((100vw - 1180px) / 2 + 24px));
   color: #9fb2bb;
-  background: #090e11;
+  background: rgba(9, 14, 17, 0.9);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ambient-canvas {
+    display: none;
+  }
 }
 
 .site-footer strong {
