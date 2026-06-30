@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 390" role="img" aria-labelledby="title">
+  <title id="title">银滩景区</title>
+  <rect width="520" height="390" fill="#d7f0ed"/>
+  <circle cx="415" cy="80" r="48" fill="#d97706"/>
+  <path d="M0 185 C110 150 190 210 315 170 C410 140 460 170 520 150 L520 390 L0 390 Z" fill="#0f766e"/>
+  <path d="M0 245 C110 220 200 265 320 238 C430 212 470 230 520 220 L520 390 L0 390 Z" fill="#73c9c5"/>
+  <path d="M0 306 C120 290 250 320 370 300 C455 286 490 292 520 286 L520 390 L0 390 Z" fill="#f1d59e"/>
+  <path d="M92 145 C88 210 75 282 55 348" stroke="#5f4b32" stroke-width="12" stroke-linecap="round"/>
+  <path d="M90 140 C50 138 25 126 8 100 C50 101 78 113 90 140 Z" fill="#0f766e"/>
+  <path d="M96 139 C132 116 164 111 204 119 C173 147 137 152 96 139 Z" fill="#229b81"/>
+  <path d="M92 136 C78 100 78 68 94 35 C116 68 119 102 92 136 Z" fill="#16796c"/>
+</svg>
