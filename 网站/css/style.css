@@ -254,8 +254,15 @@ img {
   inset: 0;
   margin: 0;
   opacity: 0;
-  transform: scale(1.04);
-  animation: heroFade 20s infinite;
+  transform: scale(1.045);
+  transition: opacity 0.8s ease, transform 4s ease;
+  pointer-events: none;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 .hero-slide img {
@@ -308,18 +315,6 @@ img {
   font-style: normal;
 }
 
-.slide-two {
-  animation-delay: 5s;
-}
-
-.slide-three {
-  animation-delay: 10s;
-}
-
-.slide-four {
-  animation-delay: 15s;
-}
-
 .hero-dots {
   position: absolute;
   right: 28px;
@@ -345,45 +340,18 @@ img {
   background: #57f0c6;
   transform: scaleX(0);
   transform-origin: left;
-  animation: dotProgress 20s infinite;
 }
 
-.hero-dots span:nth-child(2)::after {
-  animation-delay: 5s;
-}
-
-.hero-dots span:nth-child(3)::after {
-  animation-delay: 10s;
-}
-
-.hero-dots span:nth-child(4)::after {
-  animation-delay: 15s;
-}
-
-@keyframes heroFade {
-  0% {
-    opacity: 0;
-    transform: scale(1.04);
-  }
-  4%, 25% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  30%, 100% {
-    opacity: 0;
-    transform: scale(1.025);
-  }
+.hero-dots span.is-active::after {
+  animation: dotProgress 3.5s linear forwards;
 }
 
 @keyframes dotProgress {
-  0%, 24% {
+  0% {
     transform: scaleX(0);
   }
-  4%, 25% {
+  100% {
     transform: scaleX(1);
-  }
-  26%, 100% {
-    transform: scaleX(0);
   }
 }
 
@@ -810,7 +778,7 @@ img {
     animation: none;
   }
 
-  .hero-slide:first-child {
+  .hero-slide.is-active {
     opacity: 1;
     transform: none;
   }
