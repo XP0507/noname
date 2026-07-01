@@ -436,6 +436,23 @@ img {
   overflow: hidden;
 }
 
+.product-card[data-product] {
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card[data-product]:hover,
+.product-card[data-product]:focus-visible {
+  border-color: rgba(87, 240, 198, 0.46);
+  box-shadow: 0 24px 55px rgba(87, 240, 198, 0.1), 0 20px 42px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.product-card[data-product]:focus-visible {
+  outline: 3px solid rgba(87, 240, 198, 0.42);
+  outline-offset: 4px;
+}
+
 .product-card img {
   width: 100%;
   height: 270px;

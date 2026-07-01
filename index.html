@@ -98,31 +98,34 @@
         <a class="text-link" href="destinations.html">查看全部产品</a>
       </div>
       <div class="product-grid">
-        <article class="product-card">
+        <article class="product-card" data-product="pulse" tabindex="0" role="button" aria-label="查看 NOVA Pulse Pro 参数">
           <img src="assets/photo-headphone.png" alt="NOVA Pulse Pro 无线耳机产品场景图">
           <div class="product-body">
             <span class="tag">Audio</span>
             <h3>NOVA Pulse Pro</h3>
             <p>主动降噪、低延迟游戏模式和轻量佩戴，适合通勤与学习。</p>
             <strong>¥699</strong>
+            <span class="detail-hint">点击查看参数</span>
           </div>
         </article>
-        <article class="product-card">
+        <article class="product-card" data-product="keys" tabindex="0" role="button" aria-label="查看 NOVA Keys 75 参数">
           <img src="assets/photo-keyboard.png" alt="NOVA Keys 机械键盘产品场景图">
           <div class="product-body">
             <span class="tag orange">Desk</span>
             <h3>NOVA Keys 75</h3>
             <p>75% 配列、热插拔轴体、多设备连接，打造高效桌面。</p>
             <strong>¥529</strong>
+            <span class="detail-hint">点击查看参数</span>
           </div>
         </article>
-        <article class="product-card">
+        <article class="product-card" data-product="watch" tabindex="0" role="button" aria-label="查看 NOVA Watch S 参数">
           <img src="assets/photo-watch.png" alt="NOVA Watch 智能手表产品场景图">
           <div class="product-body">
             <span class="tag blue">Wear</span>
             <h3>NOVA Watch S</h3>
             <p>运动记录、消息提醒、睡眠监测，兼顾外观与功能。</p>
             <strong>¥899</strong>
+            <span class="detail-hint">点击查看参数</span>
           </div>
         </article>
       </div>
@@ -159,8 +162,32 @@
     </div>
     <p>版权所有 © 2026 NOVA LAB　桂ICP备20260701号</p>
   </footer>
+  <div class="product-modal" id="productModal" aria-hidden="true">
+    <div class="product-modal-backdrop" data-close-modal></div>
+    <section class="product-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+      <button class="modal-close" type="button" aria-label="关闭产品参数" data-close-modal>×</button>
+      <div class="modal-media">
+        <img id="modalProductImage" src="" alt="">
+      </div>
+      <div class="modal-content">
+        <span class="tag" id="modalProductCategory"></span>
+        <h2 id="modalProductName"></h2>
+        <p id="modalProductSummary"></p>
+        <div class="modal-price-row">
+          <strong id="modalProductPrice"></strong>
+          <span id="modalProductScene"></span>
+        </div>
+        <dl class="spec-grid" id="modalProductSpecs"></dl>
+        <div class="modal-actions">
+          <a class="primary-btn" href="register.html">加入会员获取报价</a>
+          <button class="ghost-btn" type="button" data-close-modal>继续浏览</button>
+        </div>
+      </div>
+    </section>
+  </div>
   <script src="js/ambient.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/hero-carousel.js"></script>
+  <script src="js/product-details.js"></script>
 </body>
 </html>

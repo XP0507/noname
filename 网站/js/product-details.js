@@ -36,7 +36,7 @@
       name: "NOVA Watch S",
       category: "智能穿戴",
       image: "assets/photo-watch.png",
-      price: "会员价 ¥459",
+      price: "会员价 ¥899",
       scene: "运动 / 提醒 / 健康",
       summary: "轻薄智能手表，覆盖日常提醒、运动记录和基础健康监测。",
       specs: [
@@ -177,7 +177,7 @@
     }
   }
 
-  document.querySelectorAll(".catalog-card[data-product]").forEach((card) => {
+  document.querySelectorAll(".catalog-card[data-product], .product-card[data-product]").forEach((card) => {
     card.addEventListener("click", () => openProduct(card.dataset.product));
     card.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
