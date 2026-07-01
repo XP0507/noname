@@ -599,6 +599,20 @@ img {
   flex-direction: column;
   overflow: hidden;
   padding: 0;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.catalog-card:hover,
+.catalog-card:focus-visible {
+  border-color: rgba(87, 240, 198, 0.46);
+  box-shadow: 0 24px 55px rgba(87, 240, 198, 0.1), 0 20px 42px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.catalog-card:focus-visible {
+  outline: 3px solid rgba(87, 240, 198, 0.42);
+  outline-offset: 4px;
 }
 
 .catalog-card img {
@@ -623,6 +637,169 @@ img {
   margin: 12px 0 0;
   padding-left: 18px;
   color: #c7d5da;
+}
+
+.detail-hint {
+  display: inline-flex;
+  margin-top: 16px;
+  color: #57f0c6;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.detail-hint::after {
+  content: ">";
+  margin-left: 8px;
+}
+
+.modal-lock {
+  overflow: hidden;
+}
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.product-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 12, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.product-modal-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.86fr) minmax(320px, 1fr);
+  width: min(980px, 100%);
+  max-height: min(760px, calc(100vh - 48px));
+  overflow: auto;
+  background:
+    linear-gradient(145deg, rgba(87, 240, 198, 0.12), rgba(255, 207, 90, 0.08)),
+    rgba(14, 22, 27, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.45);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgba(8, 13, 18, 0.72);
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  color: #071013;
+  background: #57f0c6;
+}
+
+.modal-media {
+  min-height: 460px;
+  background: #0b1218;
+}
+
+.modal-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+}
+
+.modal-content {
+  padding: 42px;
+}
+
+.modal-content h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+.modal-content p {
+  margin: 0 0 18px;
+  color: #b8c8ce;
+}
+
+.modal-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 22px 0;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.modal-price-row strong {
+  color: #ffcf5a;
+  font-size: 26px;
+}
+
+.modal-price-row span {
+  color: #c7d5da;
+  text-align: right;
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.spec-grid div {
+  min-height: 92px;
+  padding: 14px;
+  background: rgba(7, 13, 18, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.spec-grid dt {
+  margin-bottom: 7px;
+  color: #57f0c6;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.spec-grid dd {
+  margin: 0;
+  color: #e5f2f4;
+  line-height: 1.45;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
 }
 
 .bundle-section {
@@ -995,8 +1172,14 @@ img {
   }
 
   .bundle-section,
-  .bundle-grid {
+  .bundle-grid,
+  .product-modal-panel {
     grid-template-columns: 1fr;
+  }
+
+  .modal-media,
+  .modal-media img {
+    min-height: 320px;
   }
 
   .side-panel {
@@ -1059,5 +1242,35 @@ img {
 
   .section {
     padding: 42px 18px;
+  }
+
+  .product-modal {
+    padding: 14px;
+  }
+
+  .modal-content {
+    padding: 28px 20px 22px;
+  }
+
+  .modal-content h2 {
+    font-size: 30px;
+  }
+
+  .modal-price-row,
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-price-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .modal-price-row span {
+    text-align: left;
+  }
+
+  .spec-grid div {
+    min-height: auto;
   }
 }
