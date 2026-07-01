@@ -236,68 +236,155 @@ img {
 
 .hero-stage::before {
   position: absolute;
-  inset: 52px;
+  inset: 0;
+  z-index: 2;
   content: "";
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transform: skewY(-7deg);
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 42%, rgba(6, 10, 16, 0.88) 100%),
+    radial-gradient(circle at 18% 16%, rgba(87, 240, 198, 0.2), transparent 35%);
 }
 
-.hero-device {
+.hero-carousel {
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+}
+
+.hero-slide {
   position: absolute;
-  filter: drop-shadow(0 28px 30px rgba(0, 0, 0, 0.32));
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  animation: heroFade 20s infinite;
 }
 
-.hero-device-main {
-  width: 54%;
-  top: 56px;
-  left: 52px;
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.08) contrast(1.06);
 }
 
-.hero-device-watch {
-  width: 32%;
-  right: 42px;
-  top: 62px;
-}
-
-.hero-device-keyboard {
-  width: 74%;
-  right: 34px;
-  bottom: 56px;
-}
-
-.spec-card {
+.hero-slide figcaption {
   position: absolute;
-  min-width: 112px;
-  padding: 14px;
-  color: #071013;
-  background: #ffffff;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  z-index: 3;
+  max-width: 430px;
+  padding: 18px;
+  color: #ffffff;
+  background: rgba(9, 14, 18, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(12px);
 }
 
-.spec-card strong,
-.spec-card span {
+.hero-slide figcaption span,
+.hero-slide figcaption strong,
+.hero-slide figcaption em {
   display: block;
 }
 
-.spec-card strong {
-  font-size: 24px;
+.hero-slide figcaption span {
+  color: #071013;
+  width: fit-content;
+  margin-bottom: 8px;
+  padding: 3px 10px;
+  background: #57f0c6;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 900;
 }
 
-.spec-card span {
-  color: #506067;
-  font-size: 13px;
+.hero-slide figcaption strong {
+  font-size: 28px;
+  line-height: 1.12;
 }
 
-.spec-one {
-  right: 38px;
-  bottom: 172px;
+.hero-slide figcaption em {
+  margin-top: 6px;
+  color: #c2d4da;
+  font-style: normal;
 }
 
-.spec-two {
-  left: 42px;
-  bottom: 70px;
-  background: #ffcf5a;
+.slide-two {
+  animation-delay: 5s;
+}
+
+.slide-three {
+  animation-delay: 10s;
+}
+
+.slide-four {
+  animation-delay: 15s;
+}
+
+.hero-dots {
+  position: absolute;
+  right: 28px;
+  bottom: 30px;
+  z-index: 4;
+  display: flex;
+  gap: 8px;
+}
+
+.hero-dots span {
+  width: 34px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+}
+
+.hero-dots span::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #57f0c6;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: dotProgress 20s infinite;
+}
+
+.hero-dots span:nth-child(2)::after {
+  animation-delay: 5s;
+}
+
+.hero-dots span:nth-child(3)::after {
+  animation-delay: 10s;
+}
+
+.hero-dots span:nth-child(4)::after {
+  animation-delay: 15s;
+}
+
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  4%, 25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30%, 100% {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+}
+
+@keyframes dotProgress {
+  0%, 24% {
+    transform: scaleX(0);
+  }
+  4%, 25% {
+    transform: scaleX(1);
+  }
+  26%, 100% {
+    transform: scaleX(0);
+  }
 }
 
 .metric-strip {
@@ -717,6 +804,16 @@ img {
   #ambient-canvas {
     display: none;
   }
+
+  .hero-slide,
+  .hero-dots span::after {
+    animation: none;
+  }
+
+  .hero-slide:first-child {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .site-footer strong {
@@ -781,6 +878,27 @@ img {
 
   .hero-stage {
     min-height: 390px;
+  }
+
+  .hero-slide figcaption {
+    left: 16px;
+    right: 16px;
+    bottom: 52px;
+    padding: 14px;
+  }
+
+  .hero-slide figcaption strong {
+    font-size: 22px;
+  }
+
+  .hero-dots {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+  }
+
+  .hero-dots span {
+    flex: 1;
   }
 
   .metric-strip,
