@@ -23,21 +23,23 @@
   </header>
 
   <main>
-    <section class="page-hero product-hero">
+    <section class="page-hero product-hero" data-hero-images="assets/photo-headphone.png,assets/photo-keyboard.png,assets/photo-watch.png,assets/photo-speaker.png">
       <p class="eyebrow">Product Gallery</p>
       <h1>产品展示</h1>
       <p>耳机、键盘、智能穿戴、桌面配件，用更清晰的分类找到适合自己的装备。</p>
     </section>
 
-    <section class="section product-toolbar">
-      <a href="#audio">无线音频</a>
-      <a href="#desk">桌面效率</a>
-      <a href="#wear">智能穿戴</a>
-      <a href="#mobile">移动电源</a>
+    <section class="section product-toolbar" data-filter-group>
+      <a class="is-active" href="#all-products" data-filter="all">全部产品</a>
+      <a href="#audio" data-filter="audio">无线音频</a>
+      <a href="#desk" data-filter="desk">桌面效率</a>
+      <a href="#wear" data-filter="wear">智能穿戴</a>
+      <a href="#life" data-filter="life">生活娱乐</a>
+      <a href="#mobile" data-filter="mobile">移动电源</a>
     </section>
 
-    <section class="section catalog">
-      <article class="catalog-card" id="audio" data-product="pulse" tabindex="0" role="button" aria-label="查看 NOVA Pulse Pro 参数">
+    <section class="section catalog" id="all-products">
+      <article class="catalog-card" id="audio" data-category="audio" data-product="pulse" tabindex="0" role="button" aria-label="查看 NOVA Pulse Pro 参数">
         <img src="assets/photo-headphone.png" alt="NOVA Pulse Pro 产品场景图">
         <div>
           <span class="tag">无线音频</span>
@@ -51,7 +53,7 @@
           <span class="detail-hint">点击查看参数</span>
         </div>
       </article>
-      <article class="catalog-card" id="desk" data-product="keys" tabindex="0" role="button" aria-label="查看 NOVA Keys 75 参数">
+      <article class="catalog-card" id="desk" data-category="desk" data-product="keys" tabindex="0" role="button" aria-label="查看 NOVA Keys 75 参数">
         <img src="assets/photo-keyboard.png" alt="NOVA Keys 75 产品场景图">
         <div>
           <span class="tag orange">桌面效率</span>
@@ -65,7 +67,7 @@
           <span class="detail-hint">点击查看参数</span>
         </div>
       </article>
-      <article class="catalog-card" id="wear" data-product="watch" tabindex="0" role="button" aria-label="查看 NOVA Watch S 参数">
+      <article class="catalog-card" id="wear" data-category="wear" data-product="watch" tabindex="0" role="button" aria-label="查看 NOVA Watch S 参数">
         <img src="assets/photo-watch.png" alt="NOVA Watch S 产品场景图">
         <div>
           <span class="tag blue">智能穿戴</span>
@@ -79,7 +81,7 @@
           <span class="detail-hint">点击查看参数</span>
         </div>
       </article>
-      <article class="catalog-card" data-product="cube" tabindex="0" role="button" aria-label="查看 NOVA Cube Speaker 参数">
+      <article class="catalog-card" id="life" data-category="life" data-product="cube" tabindex="0" role="button" aria-label="查看 NOVA Cube Speaker 参数">
         <img src="assets/photo-speaker.png" alt="NOVA Cube 音箱产品场景图">
         <div>
           <span class="tag red">生活娱乐</span>
@@ -93,7 +95,7 @@
           <span class="detail-hint">点击查看参数</span>
         </div>
       </article>
-      <article class="catalog-card" data-product="buds" tabindex="0" role="button" aria-label="查看 NOVA Buds Mini 参数">
+      <article class="catalog-card" data-category="audio" data-product="buds" tabindex="0" role="button" aria-label="查看 NOVA Buds Mini 参数">
         <img src="assets/photo-earbuds.png" alt="NOVA Buds Mini 真无线耳塞产品场景图">
         <div>
           <span class="tag">轻量音频</span>
@@ -107,7 +109,7 @@
           <span class="detail-hint">点击查看参数</span>
         </div>
       </article>
-      <article class="catalog-card" data-product="glide" tabindex="0" role="button" aria-label="查看 NOVA Glide Mouse 参数">
+      <article class="catalog-card" data-category="desk" data-product="glide" tabindex="0" role="button" aria-label="查看 NOVA Glide Mouse 参数">
         <img src="assets/photo-mouse.png" alt="NOVA Glide 鼠标产品场景图">
         <div>
           <span class="tag orange">游戏外设</span>
@@ -121,7 +123,7 @@
           <span class="detail-hint">点击查看参数</span>
         </div>
       </article>
-      <article class="catalog-card" data-product="dock" tabindex="0" role="button" aria-label="查看 NOVA Dock Pro 参数">
+      <article class="catalog-card" data-category="desk" data-product="dock" tabindex="0" role="button" aria-label="查看 NOVA Dock Pro 参数">
         <img src="assets/photo-dock.png" alt="NOVA Dock Pro 扩展坞产品场景图">
         <div>
           <span class="tag blue">桌面扩展</span>
@@ -135,7 +137,7 @@
           <span class="detail-hint">点击查看参数</span>
         </div>
       </article>
-      <article class="catalog-card" id="mobile" data-product="power" tabindex="0" role="button" aria-label="查看 NOVA PowerCore 参数">
+      <article class="catalog-card" id="mobile" data-category="mobile" data-product="power" tabindex="0" role="button" aria-label="查看 NOVA PowerCore 参数">
         <img src="assets/photo-powerbank.png" alt="NOVA PowerCore 充电宝产品场景图">
         <div>
           <span class="tag red">移动能源</span>
@@ -238,5 +240,6 @@
   <script src="js/ambient.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/product-details.js"></script>
+  <script src="js/page-dynamics.js"></script>
 </body>
 </html>
