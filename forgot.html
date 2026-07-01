@@ -22,8 +22,9 @@
     </div>
   </header>
   <main class="auth-page">
-    <form class="auth-form single-form" action="login.html" method="get">
+    <form class="auth-form single-form" id="forgotForm" action="login.html" method="get">
       <h1>找回密码</h1>
+      <p class="auth-message" id="forgotMessage" role="status" aria-live="polite"></p>
       <label for="resetEmail">注册邮箱</label>
       <input id="resetEmail" type="email" name="email" placeholder="请输入注册邮箱" required>
       <button type="submit">发送验证邮件</button>
@@ -34,5 +35,6 @@
     <p>版权所有 © 2026 NOVA LAB　桂ICP备20260701号</p>
   </footer>
   <script src="js/ambient.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>

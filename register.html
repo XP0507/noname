@@ -29,8 +29,9 @@
         <h1>创建会员账号</h1>
         <p>获得新品提醒、会员专属价、线下体验预约和售后进度查询服务。</p>
       </div>
-      <form class="auth-form" action="login.html" method="get">
+      <form class="auth-form" id="registerForm" action="login.html" method="get">
         <h2>注册会员</h2>
+        <p class="auth-message" id="registerMessage" role="status" aria-live="polite"></p>
         <label for="username">用户名</label>
         <input id="username" name="username" type="text" placeholder="4-16位字母或数字" pattern="[A-Za-z0-9]{4,16}" required>
 
@@ -63,5 +64,6 @@
     <p>版权所有 © 2026 NOVA LAB　桂ICP备20260701号</p>
   </footer>
   <script src="js/ambient.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>

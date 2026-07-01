@@ -757,6 +757,36 @@ img {
   color: #9fb2bb;
 }
 
+.auth-message {
+  display: none;
+  margin: -8px 0 18px;
+  padding: 12px 14px;
+  color: #d9fff4;
+  background: rgba(87, 240, 198, 0.12);
+  border: 1px solid rgba(87, 240, 198, 0.28);
+  border-radius: 6px;
+}
+
+.auth-message.is-visible {
+  display: block;
+}
+
+.auth-message.is-error {
+  color: #ffe3e3;
+  background: rgba(255, 107, 107, 0.14);
+  border-color: rgba(255, 107, 107, 0.36);
+}
+
+.member-chip {
+  color: #071013;
+  background: #57f0c6;
+  font-weight: 800;
+}
+
+.logout-button {
+  font-family: inherit;
+}
+
 .site-footer {
   display: flex;
   align-items: center;

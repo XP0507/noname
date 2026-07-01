@@ -29,8 +29,9 @@
         <h1>欢迎回来</h1>
         <p>登录后可查看会员价格、收藏装备方案、查询售后进度，并预约线下体验。</p>
       </div>
-      <form class="auth-form" action="index.html" method="get">
+      <form class="auth-form" id="loginForm" action="index.html" method="get">
         <h2>会员登录</h2>
+        <p class="auth-message" id="loginMessage" role="status" aria-live="polite"></p>
         <label for="loginAccount">手机号或邮箱</label>
         <input id="loginAccount" name="account" type="text" placeholder="请输入手机号或邮箱" required>
 
@@ -52,5 +53,6 @@
     <p>版权所有 © 2026 NOVA LAB　桂ICP备20260701号</p>
   </footer>
   <script src="js/ambient.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>
