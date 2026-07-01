@@ -573,20 +573,28 @@ img {
 }
 
 .catalog-card {
-  display: grid;
-  grid-template-columns: 190px 1fr;
-  gap: 22px;
-  align-items: center;
-  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
 }
 
 .catalog-card img {
-  width: 210px;
-  height: 178px;
+  width: 100%;
+  height: 280px;
   object-fit: cover;
   background: #10181d;
-  border-radius: 8px;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.24);
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.catalog-card:hover img {
+  transform: scale(1.04);
+  filter: saturate(1.1) contrast(1.04);
+}
+
+.catalog-card > div {
+  padding: 24px;
 }
 
 .catalog-card ul {
@@ -608,7 +616,26 @@ img {
   gap: 18px;
 }
 
-.article-card,
+.article-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 22px;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 0;
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+}
+
+.article-card > div {
+  padding: 26px 26px 26px 0;
+}
+
 .side-panel,
 .contact-panel {
   padding: 26px;
@@ -902,12 +929,18 @@ img {
   .metric-strip,
   .product-grid,
   .catalog,
-  .catalog-card {
+  .catalog-card,
+  .article-card {
     grid-template-columns: 1fr;
   }
 
+  .article-card img,
   .catalog-card img {
-    width: 100%;
+    height: 220px;
+  }
+
+  .article-card > div {
+    padding: 0 20px 22px;
   }
 
   .section {
